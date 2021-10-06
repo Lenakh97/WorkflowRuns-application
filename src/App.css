@@ -58,10 +58,19 @@
   border-bottom: 1pt solid black;
 }
 
+.tr {
+  border-bottom: 1pt solid black;
+  border-right: 1pt solid black;
+}
+
 .thead{
   border-bottom: 1pt solid black;
 }
 
 .failure{
+  background: rgb(255, 0, 0);
+}
+
+.startup_failure{
   background: rgb(255, 0, 0);
 }
