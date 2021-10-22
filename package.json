@@ -1,20 +1,24 @@
 {
+  "homepage": "https://lenakh97.github.io/WorkflowRuns-application",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
+    "axios": "0.23.0",
     "bootstrap": "^5.1.0",
     "date-fns": "^2.23.0",
-    "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.6",
     "react-dom": "^17.0.2",
-    "react-scripts": "^1.1.5",
     "styled-components": "^5.3.1",
     "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "node-sass": "^6.0.1",
+    "react-scripts": "^1.1.5"
   },
   "scripts": {
     "start": "react-scripts start",
