@@ -33,5 +33,5 @@ jobs:
           git init
           git add -A
           git commit -m "update Web App"
-          git remote add origin https://github.com/${GITHUB_REPOSITORY}.git
+          git remote add origin https://Lenakh97:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           git push -f origin HEAD:gh-pages
