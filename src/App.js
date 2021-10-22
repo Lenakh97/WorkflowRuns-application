@@ -11,7 +11,7 @@ function App() {
     );
 
     setData(result.data);
-  });
+  }, []);
 
   var sortedData = data.workflow_runs.sort(function (a, b) {
     return (
