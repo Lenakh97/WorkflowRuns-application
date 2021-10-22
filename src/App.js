@@ -7,7 +7,7 @@ function App() {
   const [data, setData] = useState({ workflow_runs: [] });
   useEffect(async () => {
     const result = await axios(
-      "https://lenakh97.github.io/get-workflow-runs/public/JSONObject.json"
+      `https://lenakh97.github.io/get-workflow-runs/JSONObject.json?${Date.now()}`
     );
 
     setData(result.data);
