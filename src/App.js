@@ -27,8 +27,7 @@ function App() {
         <thead className="thead">
           <tr className="thead">
             <th> Repository Name</th>
-            <th> Headbranch </th>
-            <th> Status </th>
+            <th> Branch </th>
             <th> Last updated </th>
           </tr>
         </thead>
@@ -40,9 +39,6 @@ function App() {
               </td>
               <td className="td" key={item.url}>
                 {item.branch}
-              </td>
-              <td className="td" key={item.id}>
-                {item.conclusion}
               </td>
               <td className="td" key={item.updated_at}>
                 {formatDistanceToNow(new Date(item.updated_at))}

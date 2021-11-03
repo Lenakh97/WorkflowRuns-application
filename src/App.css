@@ -46,7 +46,8 @@
 }
 
 .tablediv{
-  border: 1px solid #333;
+  /*border: 1px solid #333;*/
+  border-spacing: 0
 }
 .td {
     padding: 0.5rem;
@@ -68,9 +69,13 @@
 }
 
 .failure{
-  background: rgb(255, 0, 0);
+  background: rgba(238, 0, 0, 0.774);
 }
 
 .startup_failure{
   background: rgb(255, 0, 0);
+}
+
+.success{
+  background: rgba(33, 153, 43, 0.37);
 }
