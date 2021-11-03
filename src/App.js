@@ -4,14 +4,30 @@ import axios from "axios";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 
 function App() {
+  const [exp, setExp] = useState(10);
   const [data, setData] = useState({ workflow_runs: [] });
-  useEffect(async () => {
-    const result = await axios(
-      `https://lenakh97.github.io/get-workflow-runs/JSONObject.json?${Date.now()}`
-    );
 
-    setData(result.data);
-  }, []);
+  const fetchData = async () => {
+    try {
+      const result = await axios.get(
+        `https://lenakh97.github.io/get-workflow-runs/JSONObject.json?${Date.now()}`
+      );
+
+      setData(result.data);
+      setExp(parseInt(result.headers["cache-control"].split("=")[1], 10));
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
+  console.log(exp);
+
+  useEffect(() => {
+    fetchData();
+    const interval = setInterval(() => {
+      fetchData();
+    }, exp * 1000);
+    return () => clearInterval(interval);
+  }, [exp]);
 
   var sortedData = data.workflow_runs.sort(function (a, b) {
     return (
