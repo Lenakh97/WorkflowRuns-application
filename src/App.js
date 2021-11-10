@@ -4,7 +4,7 @@ import axios from "axios";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 
 function App() {
-  const [exp, setExp] = useState(10);
+  const [exp, setExp] = useState();
   const [data, setData] = useState({ workflow_runs: [] });
 
   const fetchData = async () => {
@@ -19,10 +19,12 @@ function App() {
       console.error(err.message);
     }
   };
-  console.log(exp);
 
   useEffect(() => {
-    fetchData();
+    if (exp === undefined) {
+      fetchData();
+      return;
+    }
     const interval = setInterval(() => {
       fetchData();
     }, exp * 1000);
