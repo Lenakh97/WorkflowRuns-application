@@ -31,7 +31,7 @@ function App() {
     return () => clearInterval(interval);
   }, [exp]);
 
-  var sortedData = data.workflow_runs.sort(function (a, b) {
+  var sortedData = data.workflow_runs.sort(function (a:{conclusion:string, updated_at:string}, b:{conclusion:string, updated_at: string}) {
     return (
       a.conclusion.localeCompare(b.conclusion) ||
       new Date(b.updated_at) - new Date(a.updated_at)
@@ -50,7 +50,7 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          {sortedData.map((item) => (
+          {sortedData.map((item:{conclusion:string, name:string, url:string, branch:string, updated_at: string}) => (
             <tr className={item.conclusion}>
               <td className="td" key={item.name}>
                 <a href={item.url}>{item.name}</a>
