@@ -45,37 +45,31 @@
   justify-content: center;
 }
 
-.tablediv{
-  /*border: 1px solid #333;*/
-  border-spacing: 0
-}
-.td {
-    padding: 0.5rem;
-    border-bottom: 1pt solid black;
+table {
+  border: 1px solid #000;
+  border-spacing: 0;
 }
 
-.th {
-  border: 1px solid #333;
+td {
+  padding: 0.5rem;
+}
+
+td,
+th {
   border-bottom: 1pt solid black;
 }
-
-.tr {
-  border-bottom: 1pt solid black;
-  border-right: 1pt solid black;
+tr:last-child td {
+  border: 0;
 }
 
-.thead{
-  border-bottom: 1pt solid black;
-}
-
-.failure{
+.failure {
   background: rgba(238, 0, 0, 0.774);
 }
 
-.startup_failure{
+.startup_failure {
   background: rgb(255, 0, 0);
 }
 
-.success{
+.success {
   background: rgba(33, 153, 43, 0.37);
 }
