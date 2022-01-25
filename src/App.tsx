@@ -68,7 +68,9 @@ function App() {
 						}) => (
 							<tr className={item.conclusion}>
 								<td key={item.name}>
-									<a href={item.url}>{item.name}</a>
+									<a href={item.url} target="_blank" rel="noreferrer">
+										{item.name}
+									</a>
 								</td>
 								<td key={item.url}>{item.branch}</td>
 								<td key={item.updated_at}>
