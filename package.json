@@ -1,32 +1,28 @@
 {
   "homepage": "https://lenakh97.github.io/WorkflowRuns-application",
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "@nordicsemiconductor/nrf-asset-tracker-workflow-runs",
+  "version": "0.0.0-development",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.4.0",
-    "@types/node": "^16.11.18",
-    "@types/react": "^17.0.38",
-    "@types/react-dom": "^17.0.11",
-    "axios": "0.23.0",
-    "bootstrap": "^5.1.0",
-    "date-fns": "^2.23.0",
-    "react": "^17.0.2",
-    "react-bootstrap": "^2.0.0-beta.6",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
-    "styled-components": "^5.3.1",
-    "web-vitals": "^1.0.1"
+    "axios": "0.25.0",
+    "bootstrap": "5.1.0",
+    "date-fns": "2.28.0",
+    "react": "17.0.2",
+    "react-bootstrap": "2.1.1",
+    "react-dom": "17.0.2",
+    "styled-components": "5.3.1",
+    "web-vitals": "2.1.4"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "node-sass": "^6.0.1",
-    "react-scripts": "^1.1.5",
+    "@testing-library/jest-dom": "5.16.1",
+    "@testing-library/react": "12.1.2",
+    "@testing-library/user-event": "13.5.0",
+    "@types/jest": "27.4.0",
+    "@types/node": "17.0.12",
+    "@types/react": "17.0.38",
+    "@types/react-dom": "17.0.11",
+    "node-sass": "7.0.1",
+    "react-scripts": "5.0.0",
     "typescript": "4.5.5"
   },
   "scripts": {
@@ -43,8 +39,14 @@
   },
   "browserslist": {
     "production": [
-      ">5%",
+      ">0.2%",
+      "not dead",
       "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
   }
 }
