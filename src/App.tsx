@@ -3,20 +3,30 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 
+type WorkflowRunsType = {
+  workflow_runs: [{
+    name: string, 
+    branch: string, 
+    conclusion: string, 
+    url:string, 
+    updated_at: string
+  }]
+}
+
 function App() {
-  const [exp, setExp] = useState();
-  const [data, setData] = useState({ workflow_runs: [] });
+  const [exp, setExp] = useState<number>();
+  const [data, setData] = useState({ workflow_runs: [] as unknown as [{name: string, branch: string, conclusion: string, url:string, updated_at: string}]})
 
   const fetchData = async () => {
     try {
-      const result = await axios.get(
+      const result = await axios.get<WorkflowRunsType>(
         `https://lenakh97.github.io/get-workflow-runs/JSONObject.json?${Date.now()}`
       );
 
       setData(result.data);
       setExp(parseInt(result.headers["cache-control"].split("=")[1], 10));
     } catch (err) {
-      console.error(err.message);
+      console.error(err)
     }
   };
 
@@ -34,7 +44,7 @@ function App() {
   var sortedData = data.workflow_runs.sort(function (a:{conclusion:string, updated_at:string}, b:{conclusion:string, updated_at: string}) {
     return (
       a.conclusion.localeCompare(b.conclusion) ||
-      new Date(b.updated_at) - new Date(a.updated_at)
+      new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
     );
   });
 
