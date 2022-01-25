@@ -49,12 +49,12 @@ function App() {
 	return (
 		<div>
 			<h1>Workflow runs for the nRF Asset Tracker team</h1>
-			<table className="tablediv">
-				<thead className="thead">
-					<tr className="thead">
-						<th> Repository Name</th>
-						<th> Branch </th>
-						<th> Last updated </th>
+			<table>
+				<thead>
+					<tr>
+						<th>Repository Name</th>
+						<th>Branch</th>
+						<th>Last updated</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -67,13 +67,11 @@ function App() {
 							updated_at: string
 						}) => (
 							<tr className={item.conclusion}>
-								<td className="td" key={item.name}>
+								<td key={item.name}>
 									<a href={item.url}>{item.name}</a>
 								</td>
-								<td className="td" key={item.url}>
-									{item.branch}
-								</td>
-								<td className="td" key={item.updated_at}>
+								<td key={item.url}>{item.branch}</td>
+								<td key={item.updated_at}>
 									{formatDistanceToNow(new Date(item.updated_at))}
 								</td>
 							</tr>
