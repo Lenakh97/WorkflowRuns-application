@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@nordicsemiconductor/asset-tracker-cloud-code-style": "11.0.186",
-    "@testing-library/jest-dom": "5.17.0",
+    "@testing-library/jest-dom": "6.4.2",
     "@testing-library/react": "12.1.5",
     "@testing-library/user-event": "14.5.1",
     "@types/jest": "29.5.11",
