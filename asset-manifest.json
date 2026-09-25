@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/WorkflowRuns-application/static/css/main.2c62eaf2.css",
+    "main.js": "/WorkflowRuns-application/static/js/main.cb41accf.js",
+    "index.html": "/WorkflowRuns-application/index.html",
+    "main.2c62eaf2.css.map": "/WorkflowRuns-application/static/css/main.2c62eaf2.css.map",
+    "main.cb41accf.js.map": "/WorkflowRuns-application/static/js/main.cb41accf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2c62eaf2.css",
+    "static/js/main.cb41accf.js"
+  ]
+}
